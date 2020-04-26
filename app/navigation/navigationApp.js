@@ -1,7 +1,23 @@
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
+import GamerScreen from '../screens/gamer';
 import PokedexScreen from '../screens/pokedex';
 import PokemonScreen from '../screens/pokemon';
+
+const GamerStack = createStackNavigator(
+    {
+        Gamer: {
+            screen: GamerScreen,
+            navigationOptions: {
+                headerShown: false,
+                headerMode: false,
+            },
+        }
+    },
+    {
+        initialRouteName: 'Gamer'
+    }
+);
 
 const PokedexStack = createStackNavigator(
     {
@@ -18,15 +34,16 @@ const PokedexStack = createStackNavigator(
                 headerShown: false,
                 headerMode: false,
             },
-        },
+        }
     },
     {
         initialRouteName: 'Pokedex'
     }
 );
 
-const GuestSwitchNavigator = createSwitchNavigator({
+const PokemonSwitchNavigator = createSwitchNavigator({
+    GamerStack,
     PokedexStack
 });
 
-export default createAppContainer(GuestSwitchNavigator);
+export default createAppContainer(PokemonSwitchNavigator);
