@@ -16,6 +16,7 @@ export default function App() {
   useEffect(() => {
 
     navBarColor(Colors.black);
+    console.disableYellowBox = true;
 
   }, []);
 
