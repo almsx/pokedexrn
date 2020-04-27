@@ -9,7 +9,7 @@ export default PokemonGamer = ({ image, name, id, actionButton }) => {
             <View
                 style={styles.headPokemonGamer}
             >
-                <Text style={styles.instructions}>Selecciona Uno:</Text>
+                <Text style={styles.instructions}>¿Qué jugador eres?</Text>
             </View>
             <View style={styles.bodyPokemonGamer}>
                 <Image
