@@ -12,10 +12,10 @@ if (ancho > alto) {
     ancho = aux;
 };
 
+const fontTitle = ancho * 0.070;
 const fontButtons = ancho * 0.052;
-const fontTitle = ancho * 0.052;
-const fontH1 = ancho * 0.052;
-const fontH2 = ancho * 0.045;
+const fontH1 = ancho * 0.048;
+const fontH2 = ancho * 0.044;
 const fontH3 = ancho * 0.038;
 
 export const button = fontButtons;
