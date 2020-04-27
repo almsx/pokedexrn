@@ -6,6 +6,7 @@ import misty from '../assets/misty.png';
 import avatar_ash from '../assets/avatar_ash.png';
 import avatar_brook from '../assets/avatar_brook.png';
 import avatar_misty from '../assets/avatar_misty.png';
+import back from '../assets/back.png';
 
 /* Export Assets */
 export default {
@@ -15,5 +16,6 @@ export default {
   misty,
   avatar_ash,
   avatar_brook,
-  avatar_misty
+  avatar_misty,
+  back
 };
