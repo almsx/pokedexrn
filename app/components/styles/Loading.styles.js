@@ -4,7 +4,7 @@ import {
     Platform
 } from 'react-native';
 
-import { Colors, LibraryFont } from '../../utils/';
+import { Colors } from '../../utils/';
 
 module.exports = StyleSheet.create({
     overlay: {
