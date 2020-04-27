@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View } from 'react-native';
+import { View, Platform } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
 import QRCodeScanner from 'react-native-qrcode-scanner';
 import ImageContainer from '../components/ImageContainer';
@@ -77,7 +77,7 @@ export default function Pokedex(props) {
                     id: response.id,
                     pic: `https://pokeres.bastionbot.org/images/pokemon/${response.id}.png`
                 };
-                
+
                 setIsLoading(false);
                 navigation.navigate('Pokemon', {
                     pokemon
@@ -98,16 +98,19 @@ export default function Pokedex(props) {
                 <View
                     style={styles.gamerPokedex}
                 >
-                    <PokemonAvatar avatar={gamer} action={() => closePokedex()} />
+                    <PokemonAvatar avatar={gamer} />
                 </View>
                 <View
                     style={styles.bodyPokedex}
                 >
                     <QRCodeScanner
-                        onRead={this.onSuccess}
+                        onRead={(e) => onSuccess(e)}
                         reactivate={scanner}
+                        showMarker={Platform.OS != 'android' ? false : true}
+                        cameraStyle={styles.camera}
+                        topViewStyle={styles.zeroContainer}
+                        bottomViewStyle={styles.zeroContainer}
                     />
-
                 </View>
                 {againScan &&
                     <View

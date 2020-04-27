@@ -1,5 +1,5 @@
 import {
-    StyleSheet, 
+    StyleSheet,
     Dimensions,
     Platform
 } from 'react-native';
@@ -9,17 +9,17 @@ import { Colors, LibraryFont } from '../../utils/';
 module.exports = StyleSheet.create({
     headPokedex: {
         width: Dimensions.get('window').width,
-        height: Platform.OS != 'android' ? Dimensions.get('window').height * 0.08: Dimensions.get('window').height * 0.07
+        height: Platform.OS != 'android' ? Dimensions.get('window').height * 0.08 : Dimensions.get('window').height * 0.07
     },
     gamerPokedex: {
         width: Dimensions.get('window').width,
-        height: Platform.OS != 'android' ? Dimensions.get('window').height * 0.14: Dimensions.get('window').height * 0.18,
+        height: Platform.OS != 'android' ? Dimensions.get('window').height * 0.14 : Dimensions.get('window').height * 0.18,
         alignItems: 'flex-end',
         justifyContent: 'center'
     },
     bodyPokedex: {
         width: Dimensions.get('window').width,
-        height: Dimensions.get('window').height * 0.45
+        height: Platform.OS != 'android' ? Dimensions.get('window').height * 0.45 : Dimensions.get('window').height * 0.70
     },
     again: {
         width: Dimensions.get('window').width,
@@ -43,5 +43,12 @@ module.exports = StyleSheet.create({
         color: Colors.white,
         fontSize: LibraryFont.h3,
         textAlign: 'center'
+    },
+    camera: {
+        height: Dimensions.get('window').height
+    },
+    zeroContainer: {
+        height: 0,
+        flex: 0,
     }
 });
